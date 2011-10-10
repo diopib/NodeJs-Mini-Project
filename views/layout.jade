@@ -1,0 +1,26 @@
+!!!
+html
+  head
+    title = title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    style(type='text/css')
+              body {margin: 5% 25% 5% 25%; padding: 0; background: white;}
+          
+  body
+    #header(style='background: white; text-align: center; color: black;')
+      table(width='100%')
+        tr
+          td(align='left')
+            a(href='/')
+              img(src='http://family.go.com/images/cms/entertainment/mickey-mouse-stencil-240x240.jpg', width='100', height='100')
+          td(align='right', valign='bottom')
+            a(href='/loginPage') Login 
+            | |
+            a(href='/signupPage') Sign up
+    #content(style='background-color: white; border-width: 2px; border-color: black; width: 100%; border-style: solid; height: 100%;')
+      table(width='100%', height='350')
+        tr
+          td(align='center', calign='middle')
+            body!= body
+    #footer(style='text-align: left;')
+      | Copyright Webdev Miniproject 2011

@@ -1,0 +1,15 @@
+h2(color='red') User name #{username} already exist, please try another one
+br
+form(name='signupform', action='/signupValidation', method='POST')
+  h3 First Name: 
+    input(type='text', name='fname', value='')
+  br
+  h3 User Name: 
+    input(type='text', name='uname', value='')
+  br
+  h3 Password: 
+    input(type='password', name='pass', value='')
+  br
+  h3
+  input(type='submit', value='Sign Up!', name='submit') 
+
