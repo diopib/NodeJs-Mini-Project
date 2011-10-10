@@ -11,7 +11,6 @@ userData = [
 	{ firstname: "admin", username: "admin", password: "admin" }
 ];
 
-var loginform = require("express-form")
 
 //function to validate user subscription entry
 function validateSub(uname, udata){
