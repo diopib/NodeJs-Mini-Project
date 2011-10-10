@@ -1,5 +1,8 @@
 {
-    "name": "NodeMini"
+   "bin": {
+     "nodemini": "bin/NodeMini.js"
+   }
+  , "name": "NodeMini"
   , "version": "0.0.1"
   , "private": false
   , "dependencies": {
