@@ -1,0 +1,11 @@
+Example project for the NodeJs framework
+--
+The application is just a user login management form
+No database are used, the data is saved within the aplication
+and is erased if the application is stopped.
+--
+I've mostly used the Jade view engine but there is an example with the 
+html view engine.
+For that, you just have to comments the lines 43, and 61 and comment
+lines 38 and 59
+
