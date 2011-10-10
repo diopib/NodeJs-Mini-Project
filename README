@@ -7,5 +7,5 @@ and is erased if the application is stopped.
 I've mostly used the Jade view engine but there is an example with the 
 html view engine and jquery template.
 For that, you just have to comments the lines 43, and 61 and comment
-lines 38 and 59
+lines 38 and 59 in the app.js file
 
