@@ -30,6 +30,16 @@ function filled(a, b, c){
   else
     return false;
 }
+
+//function to validate login
+function validateLogin(uname, pass, udata){
+  var ret = false
+  for(var i = 0; i < udata.length; i++){
+      if(uname == udata[i].username && pass == udata[i].password)
+        ret = true
+        }
+  return ret
+    }   
 // Configuration
 
 app.configure(function(){
@@ -75,14 +85,17 @@ app.get('/signupPage', function(req, res){
 
 app.post(
   '/loginValidation',
-  function(req, res){
-    for(var i = 0; i < userData.length; i++){
-      if(req.body.uname == userData[i].username && req.body.pass == userData[i].password){
-        res.render('loginsuccessPage', {title: 'WebDev MiniProject', firstname: userData[i].firstname}); 
-        }
+  function(req, res){ 
+      var myname;   
+      if(validateLogin(req.body.uname, req.body.pass, userData)){
+        for(var i = 0; i < userData.length; i++){
+          if(req.body.uname == userData[i].username)
+            myname = userData[i].firstname;
+          }  
+        res.render('loginsuccessPage', {title: 'WebDev MiniProject', firstname: myname}); 
+      }
       else
-        res.render('loginfailPage', {title: 'WebDev MiniProject'});
-    }         
+        res.render('loginfailPage', {title: 'WebDev MiniProject'});        
   }
 );
 
